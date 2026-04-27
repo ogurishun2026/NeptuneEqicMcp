@@ -3,7 +3,7 @@ export interface Tool {
   description: string;
   inputSchema: {
     type: 'object';
-    properties: Record<string, unknown>;
+    properties?: { [key: string]: object };
     required?: string[];
   };
   execute: (params: Record<string, unknown>, context: ToolContext) => Promise<ToolResult>;
