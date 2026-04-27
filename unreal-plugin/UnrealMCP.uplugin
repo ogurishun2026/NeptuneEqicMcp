@@ -1,0 +1,30 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0.0",
+    "FriendlyName": "Unreal MCP",
+    "Description": "MCP server integration for Unreal Engine",
+    "Category": "Editor",
+    "CreatedBy": "Unreal MCP Team",
+    "CreatedByURL": "",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "CanContainContent": false,
+    "IsBetaVersion": false,
+    "IsExperimentalVersion": false,
+    "Installed": false,
+    "EngineVersion": "5.6.0",
+    "EngineVersionMax": "5.7.*",
+    "Modules": [
+        {
+            "Name": "UnrealMCP",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins": [
+        { "Name": "WebSockets", "Enabled": true },
+        { "Name": "JsonUtilities", "Enabled": true }
+    ]
+}
