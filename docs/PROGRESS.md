@@ -1,14 +1,20 @@
-# Unreal MCP Server 开发进度
+# NeptuneEqicMcp 开发进度
 
 ## 当前状态
 
-**阶段**: 插件已安装，等待测试
+**阶段**: ✅ 插件已重命名并测试通过
 
 **最后更新**: 2026-04-28
 
 ---
 
 ## 已完成工作
+
+### ✅ Phase 5: 插件重命名
+- [x] 插件从 UnrealMCP 重命名为 NeptuneEqicMcp
+- [x] 更新所有源代码中的模块名
+- [x] 更新 README 使用说明
+- [x] 推送到 GitHub
 
 ### ✅ Phase 1: MCP Server 基础设施
 - [x] Task 1: 项目初始化
