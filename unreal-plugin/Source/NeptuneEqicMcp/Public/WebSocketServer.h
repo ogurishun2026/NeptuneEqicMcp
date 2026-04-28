@@ -16,7 +16,7 @@ class UNREALMCP_API UWebSocketServer : public UObject
 public:
     UWebSocketServer();
 
-    bool Start(int32 Port = 8080);
+    bool Start(int32 Port = 18765);
     void Stop();
 
     void SendResponse(const FString& Id, bool bSuccess, const TSharedPtr<FJsonObject>& Data);
@@ -31,7 +31,7 @@ private:
     TSharedPtr<IWebSocketServer> Server;
     TSharedPtr<IWebSocket> ConnectedClient;
     bool bIsRunning = false;
-    int32 ServerPort = 8080;
+    int32 ServerPort = 18765;
 
     void HandleMessage(const FString& Message);
     FString GenerateUUID();

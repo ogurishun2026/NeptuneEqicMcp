@@ -47,9 +47,9 @@ void FNeptuneEqicMcpModule::StartupModule()
         }
     });
 
-    if (GWebSocketServer->Start(8080))
+    if (GWebSocketServer->Start(18765))
     {
-        UE_LOG(LogTemp, Log, TEXT("WebSocket server started on port 8080"));
+        UE_LOG(LogTemp, Log, TEXT("WebSocket server started on port 18765"));
     }
     else
     {

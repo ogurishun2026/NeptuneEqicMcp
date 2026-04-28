@@ -54,7 +54,7 @@
 
 ### 3. 检查WebSocket服务器
 1. 打开: Window → Developer Tools → Output Log
-2. 查找日志: "WebSocket server started on port 8080"
+2. 查找日志: "WebSocket server started on port 18765"
 3. 如果看到这条日志，说明插件正常运行
 
 ### 4. 配置Claude Code MCP
@@ -68,7 +68,7 @@
       "args": ["D:/unreal-mcp-server/dist/index.js"],
       "env": {
         "UNREAL_HOST": "localhost",
-        "UNREAL_PORT": "8080"
+        "UNREAL_PORT": "18765"
       }
     }
   }
@@ -102,7 +102,7 @@
 
 ### WebSocket服务器未启动
 - 检查Output Log是否有错误
-- 确认端口8080未被占用
+- 确认端口18765未被占用
 
 ### MCP连接失败
 - 确认Unreal编辑器已启动

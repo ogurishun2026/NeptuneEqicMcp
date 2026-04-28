@@ -33,7 +33,7 @@ npm run build
 2. 打开菜单: Edit → Plugins
 3. 搜索 "NeptuneEqicMcp"，确认已启用
 4. 打开: Window → Developer Tools → Output Log
-5. 查找日志: `WebSocket server started on port 8080`
+5. 查找日志: `WebSocket server started on port 18765`
 
 ### 4. 配置 Claude Code MCP
 
@@ -47,7 +47,7 @@ npm run build
       "args": ["你的路径/NeptuneEqicMcp/dist/index.js"],
       "env": {
         "UNREAL_HOST": "localhost",
-        "UNREAL_PORT": "8080"
+        "UNREAL_PORT": "18765"
       }
     }
   }
@@ -87,7 +87,7 @@ Claude: 调用 actor_set_transform
 
 | 端口 | 用途 |
 |------|------|
-| 8080 | WebSocket 服务器（Unreal 插件） |
+| 18765 | WebSocket 服务器（Unreal 插件） |
 
 ## 故障排除
 
@@ -97,7 +97,7 @@ Claude: 调用 actor_set_transform
 
 ### WebSocket 服务器未启动
 - 检查 Output Log 是否有错误
-- 确认端口 8080 未被占用
+- 确认端口 18765 未被占用
 
 ### MCP 连接失败
 - 确认 Unreal 编辑器已启动

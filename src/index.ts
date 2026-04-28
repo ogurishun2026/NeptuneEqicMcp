@@ -11,7 +11,7 @@ async function main() {
   // Initialize components
   const connection = new ConnectionManager({
     host: process.env.UNREAL_HOST ?? 'localhost',
-    port: parseInt(process.env.UNREAL_PORT ?? '8080', 10),
+    port: parseInt(process.env.UNREAL_PORT ?? '18765', 10),
   });
 
   const eventDispatcher = new EventDispatcher();
@@ -32,7 +32,7 @@ async function main() {
   await server.connect(transport);
 
   console.error('Unreal MCP Server started');
-  console.error(`Connecting to Unreal at ${process.env.UNREAL_HOST ?? 'localhost'}:${process.env.UNREAL_PORT ?? '8080'}`);
+  console.error(`Connecting to Unreal at ${process.env.UNREAL_HOST ?? 'localhost'}:${process.env.UNREAL_PORT ?? '18765'}`);
 }
 
 main().catch((error) => {

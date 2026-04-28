@@ -277,7 +277,7 @@ npm run build
       "args": ["D:/unreal-mcp-server/dist/index.js"],
       "env": {
         "UNREAL_HOST": "localhost",
-        "UNREAL_PORT": "8080"
+        "UNREAL_PORT": "18765"
       }
     }
   }
@@ -312,7 +312,7 @@ npm test
 ### 测试完整流程
 
 1. 打开Unreal项目（需要先安装插件）
-2. 确认Output Log显示 "WebSocket server started on port 8080"
+2. 确认Output Log显示 "WebSocket server started on port 18765"
 3. 配置Claude Code MCP
 4. 在Claude中测试： "列出当前场景中的所有Actor"
 

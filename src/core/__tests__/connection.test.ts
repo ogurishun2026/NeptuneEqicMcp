@@ -5,7 +5,7 @@ describe('ConnectionManager', () => {
   let manager: ConnectionManager;
 
   beforeEach(() => {
-    manager = new ConnectionManager({ host: 'localhost', port: 8080 });
+    manager = new ConnectionManager({ host: 'localhost', port: 18765 });
   });
 
   afterEach(async () => {
