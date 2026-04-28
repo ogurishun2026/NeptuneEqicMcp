@@ -2,11 +2,11 @@
     "FileVersion": 3,
     "Version": 1,
     "VersionName": "1.0.0",
-    "FriendlyName": "Unreal MCP",
-    "Description": "MCP server integration for Unreal Engine",
+    "FriendlyName": "NeptuneEqicMcp",
+    "Description": "MCP server integration for Unreal Engine - NeptuneEqic",
     "Category": "Editor",
-    "CreatedBy": "Unreal MCP Team",
-    "CreatedByURL": "",
+    "CreatedBy": "NeptuneEqic Team",
+    "CreatedByURL": "https://github.com/ogurishun2026/NeptuneEqicMcp",
     "DocsURL": "",
     "MarketplaceURL": "",
     "SupportURL": "",
@@ -18,7 +18,7 @@
     "EngineVersionMax": "5.7.*",
     "Modules": [
         {
-            "Name": "UnrealMCP",
+            "Name": "NeptuneEqicMcp",
             "Type": "Runtime",
             "LoadingPhase": "Default"
         }

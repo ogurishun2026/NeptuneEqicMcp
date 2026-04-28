@@ -1,16 +1,16 @@
-#include "UnrealMCP.h"
+#include "NeptuneEqicMcp.h"
 #include "WebSocketServer.h"
 #include "CommandDispatcher.h"
 #include "Handlers/ActorHandler.h"
 
-#define LOCTEXT_NAMESPACE "FUnrealMCPModule"
+#define LOCTEXT_NAMESPACE "FNeptuneEqicMcpModule"
 
 static UWebSocketServer* GWebSocketServer = nullptr;
 static UCommandDispatcher* GCommandDispatcher = nullptr;
 
-void FUnrealMCPModule::StartupModule()
+void FNeptuneEqicMcpModule::StartupModule()
 {
-    UE_LOG(LogTemp, Log, TEXT("UnrealMCP Module starting up..."));
+    UE_LOG(LogTemp, Log, TEXT("NeptuneEqicMcp Module starting up..."));
 
     GCommandDispatcher = NewObject<UCommandDispatcher>();
     GCommandDispatcher->AddToRoot();
@@ -59,11 +59,11 @@ void FUnrealMCPModule::StartupModule()
     bInitialized = true;
 }
 
-void FUnrealMCPModule::ShutdownModule()
+void FNeptuneEqicMcpModule::ShutdownModule()
 {
     if (!bInitialized) return;
 
-    UE_LOG(LogTemp, Log, TEXT("UnrealMCP Module shutting down..."));
+    UE_LOG(LogTemp, Log, TEXT("NeptuneEqicMcp Module shutting down..."));
 
     if (GWebSocketServer)
     {
@@ -83,4 +83,4 @@ void FUnrealMCPModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 
-IMPLEMENT_MODULE(FUnrealMCPModule, UnrealMCP)
+IMPLEMENT_MODULE(FNeptuneEqicMcpModule, NeptuneEqicMcp)

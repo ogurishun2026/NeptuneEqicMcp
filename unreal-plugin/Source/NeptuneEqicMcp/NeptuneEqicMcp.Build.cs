@@ -1,8 +1,8 @@
 using UnrealBuildTool;
 
-public class UnrealMCP : ModuleRules
+public class NeptuneEqicMcp : ModuleRules
 {
-    public UnrealMCP(ReadOnlyTargetRules Target) : base(Target)
+    public NeptuneEqicMcp(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

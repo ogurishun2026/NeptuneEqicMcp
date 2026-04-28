@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "unreal": {
+      "command": "node",
+      "args": ["C:/Users/MSI-NB/Desktop/NeptuneEqicMcp_fresh/dist/index.js"],
+      "env": {
+        "UNREAL_HOST": "localhost",
+        "UNREAL_PORT": "8080"
+      }
+    }
+  }
+}

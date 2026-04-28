@@ -22,15 +22,16 @@ npm run build
 ### 2. 安装 Unreal 插件
 
 1. 将 `unreal-plugin` 目录复制到你的 Unreal 项目的 `Plugins` 目录
-   - 目标路径: `你的项目/Plugins/UnrealMCP/`
-2. 在 Unreal 编辑器中启用 "Unreal MCP" 插件
+   - 源路径: `NeptuneEqicMcp/unreal-plugin/`
+   - 目标路径: `你的项目/Plugins/NeptuneEqicMcp/`
+2. 在 Unreal 编辑器中启用 "NeptuneEqicMcp" 插件
 3. 重启 Unreal 编辑器
 
 ### 3. 验证插件运行
 
 1. 打开 Unreal 编辑器
 2. 打开菜单: Edit → Plugins
-3. 搜索 "Unreal MCP"，确认已启用
+3. 搜索 "NeptuneEqicMcp"，确认已启用
 4. 打开: Window → Developer Tools → Output Log
 5. 查找日志: `WebSocket server started on port 8080`
 
@@ -41,26 +42,9 @@ npm run build
 ```json
 {
   "mcpServers": {
-    "unreal": {
+    "neptune-eqic": {
       "command": "node",
-      "args": ["C:/path/to/NeptuneEqicMcp/dist/index.js"],
-      "env": {
-        "UNREAL_HOST": "localhost",
-        "UNREAL_PORT": "8080"
-      }
-    }
-  }
-}
-```
-
-或在全局配置 `~/.claude/settings.json` 中添加：
-
-```json
-{
-  "mcpServers": {
-    "unreal": {
-      "command": "node",
-      "args": ["C:/你的路径/NeptuneEqicMcp/dist/index.js"],
+      "args": ["你的路径/NeptuneEqicMcp/dist/index.js"],
       "env": {
         "UNREAL_HOST": "localhost",
         "UNREAL_PORT": "8080"
@@ -93,10 +77,10 @@ npm run build
 Claude: 调用 actor_list
 
 用户: 创建一个叫 TestCube 的 Cube
-Claude: 调用 actor_create，参数: { name: "TestCube", type: "Cube" }
+Claude: 调用 actor_create
 
 用户: 把它移动到位置 (100, 200, 300)
-Claude: 调用 actor_set_transform，参数: { name: "TestCube", location: {x: 100, y: 200, z: 300} }
+Claude: 调用 actor_set_transform
 ```
 
 ## 端口说明
@@ -105,18 +89,11 @@ Claude: 调用 actor_set_transform，参数: { name: "TestCube", location: {x: 1
 |------|------|
 | 8080 | WebSocket 服务器（Unreal 插件） |
 
-## 环境变量
-
-| 变量 | 默认值 | 说明 |
-|------|--------|------|
-| `UNREAL_HOST` | localhost | Unreal 编辑器主机地址 |
-| `UNREAL_PORT` | 8080 | WebSocket 端口 |
-
 ## 故障排除
 
 ### 插件编译失败
 - 确保 UE 5.6+ 已安装
-- 检查 `UnrealMCP.Build.cs` 中的依赖模块
+- 删除 `Binaries` 和 `Intermediate` 目录后重新编译
 
 ### WebSocket 服务器未启动
 - 检查 Output Log 是否有错误
@@ -126,7 +103,6 @@ Claude: 调用 actor_set_transform，参数: { name: "TestCube", location: {x: 1
 - 确认 Unreal 编辑器已启动
 - 确认插件已加载
 - 检查防火墙设置
-- 确认 `.claude/settings.json` 路径正确
 
 ## 版本支持
 
