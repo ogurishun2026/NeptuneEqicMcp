@@ -1,0 +1,11 @@
+{
+  "mode": "local",
+  "local": {
+    "host": "localhost",
+    "port": 18765
+  },
+  "cloud": {
+    "host": "your-cloud-server.com",
+    "port": 18765
+  }
+}
