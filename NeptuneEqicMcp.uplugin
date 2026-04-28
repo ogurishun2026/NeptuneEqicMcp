@@ -1,0 +1,29 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0.0",
+    "FriendlyName": "NeptuneEqicMcp",
+    "Description": "MCP server integration for Unreal Engine - NeptuneEqic",
+    "Category": "Editor",
+    "CreatedBy": "NeptuneEqic Team",
+    "CreatedByURL": "https://github.com/ogurishun2026/NeptuneEqicMcp",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "CanContainContent": false,
+    "IsBetaVersion": false,
+    "IsExperimentalVersion": false,
+    "Installed": false,
+    "EngineVersion": "5.6.0",
+    "EngineVersionMax": "5.7.*",
+    "Modules": [
+        {
+            "Name": "NeptuneEqicMcp",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins": [
+        { "Name": "WebSocketNetworking", "Enabled": true }
+    ]
+}

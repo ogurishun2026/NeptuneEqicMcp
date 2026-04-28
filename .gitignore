@@ -1,0 +1,15 @@
+# Build outputs
+Binaries/
+Intermediate/
+DerivedDataCache/
+
+# IDE
+.vs/
+.vscode/
+*.sln
+*.xcodeproj
+*.xcworkspace
+
+# OS
+.DS_Store
+Thumbs.db
