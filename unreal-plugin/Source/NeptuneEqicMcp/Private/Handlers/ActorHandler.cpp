@@ -3,6 +3,7 @@
 #include "Engine/World.h"
 #include "UObject/UObjectIterator.h"
 #include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "JsonObjectConverter.h"
 
 TSharedPtr<FJsonObject> UActorHandler::Handle(
@@ -567,10 +568,20 @@ TSharedPtr<FJsonObject> UActorHandler::HandleAddComponent(const TSharedPtr<FJson
 
     NewComponent->RegisterComponent();
 
+    // If this is a SceneComponent and the Actor has no RootComponent, set it as root
+    if (USceneComponent* SceneComp = Cast<USceneComponent>(NewComponent))
+    {
+        if (!Actor->GetRootComponent())
+        {
+            Actor->SetRootComponent(SceneComp);
+        }
+    }
+
     TSharedPtr<FJsonObject> Result = MakeShareable(new FJsonObject);
     Result->SetStringField("actor_id", ActorId);
     Result->SetStringField("component_name", NewComponent->GetName());
     Result->SetStringField("component_class", NewComponent->GetClass()->GetName());
+    Result->SetBoolField("is_root_component", Actor->GetRootComponent() == NewComponent);
 
     return Result;
 }

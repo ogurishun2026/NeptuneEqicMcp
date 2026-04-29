@@ -1,7 +1,9 @@
 # 问题：添加 SceneComponent 后无法设置 Actor 变换
 
 **发现日期**: 2026-04-29
+**修复日期**: 2026-04-29
 **问题级别**: 中等
+**状态**: ✅ 已修复
 **影响功能**: `actor.add_component`, `actor.set_transform`
 
 ## 问题描述
@@ -83,3 +85,16 @@ if (USceneComponent* SceneComp = Cast<USceneComponent>(NewComponent))
 - UE 版本: 5.6
 - 平台: Windows 11
 - MCP 服务器: 本地 WebSocket 模式 (端口 18765)
+
+## 修复记录
+
+**修复日期**: 2026-04-29
+
+**修改内容**:
+1. 在 `ActorHandler.cpp` 中添加 `#include "Components/SceneComponent.h"` 头文件
+2. 在 `HandleAddComponent` 函数中，组件注册后添加 RootComponent 检查逻辑
+3. 返回结果中新增 `is_root_component` 字段，指示组件是否被设置为根组件
+
+**修改文件**: `unreal-plugin/Source/NeptuneEqicMcp/Private/Handlers/ActorHandler.cpp`
+
+**修改位置**: 第 569-584 行
